@@ -142,9 +142,13 @@ Fraud vs Non-Fraud (Distribution)
 ## 📊 Chart Visualizations
 
 ![Fraud Distribution](https://github.com/azmattanveer409/Financial-Fraud-Detection-Risk-Analytics-System-using-Machine-Learning/blob/1ef4a077a7781fd950d17710ba9c819fc3751419/Fraud%20Distribution.png)
+---
 ![Transaction Type vs Fraud](https://github.com/azmattanveer409/Financial-Fraud-Detection-Risk-Analytics-System-using-Machine-Learning/blob/f7803f40087d97a15d94f429c36064dbe91ce054/Transaction%20Type%20vs%20Fraud.png)
+---
 ![Amount vs Fraud](https://github.com/azmattanveer409/Financial-Fraud-Detection-Risk-Analytics-System-using-Machine-Learning/blob/3600729c673cbb4f0b470a833e8b37efdb4c7cea/Amount%20vs%20Fraud.png)
+---
 ![Correlation Heatmap](https://github.com/azmattanveer409/Financial-Fraud-Detection-Risk-Analytics-System-using-Machine-Learning/blob/151b87d8f6b92ff169898c39567840fe8a0d4d1d/Correlation%20Heatmap.png)
+---
 
 ---
 
