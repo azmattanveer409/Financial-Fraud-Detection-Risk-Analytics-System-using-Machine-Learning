@@ -131,6 +131,22 @@ These engineered features help capture hidden fraud patterns.
 **Strategy:** Prioritize monitoring of smaller transactions while tracking anomalies in large ones.
 
 ---
+## 📊 Exploratory Data Analysis (EDA)
+
+Fraud vs Non-Fraud (Distribution)  
+**Insight:** Fraud cases are negligible compared to non-fraud.  
+**Strategy:** Apply resampling techniques (e.g., SMOTE) or use recall-focused metrics.  
+
+...
+
+## 📊 Chart Visualizations
+
+![Fraud Distribution](images/fraud_distribution.png)
+![Transaction Type vs Fraud](images/type_vs_fraud.png)
+![Amount vs Fraud](images/amount_distribution.png)
+![Correlation Heatmap](images/correlation.png)
+
+---
 
 ## 🤖 Machine Learning Approach
 
