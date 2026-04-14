@@ -144,7 +144,7 @@ Fraud vs Non-Fraud (Distribution)
 ![Fraud Distribution](images/fraud_distribution.png)
 ![Transaction Type vs Fraud](images/type_vs_fraud.png)
 ![Amount vs Fraud](images/amount_distribution.png)
-![Correlation Heatmap](images/correlation.png)
+![Correlation Heatmap](https://github.com/azmattanveer409/Financial-Fraud-Detection-Risk-Analytics-System-using-Machine-Learning/blob/151b87d8f6b92ff169898c39567840fe8a0d4d1d/Correlation%20Heatmap.png)
 
 ---
 
