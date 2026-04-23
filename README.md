@@ -126,28 +126,28 @@ These engineered features help capture hidden fraud patterns.
 ## 📸 Chart Visualizations
 
 ### 1. Fraud Distribution
-![Fraud Distribution](images/fraud_distribution.png)
+![Fraud Distribution](https://github.com/azmattanveer409/Financial-Fraud-Detection-Risk-Analytics-System-using-Machine-Learning/blob/63cb342bbd7d3b7fcdd71bbc630ae8b56c89a4de/Fraud%20Distribution.png)
 
 > Shows the proportion of fraudulent vs legitimate transactions. Fraud cases represent only **0.13%** of all transactions — confirming extreme class imbalance that must be handled before model training using techniques like SMOTE or class weighting.
 
 ---
 
 ### 2. Transaction Type vs Fraud
-![Transaction Type vs Fraud](images/transaction_type_vs_fraud.png)
+![Transaction Type vs Fraud](https://github.com/azmattanveer409/Financial-Fraud-Detection-Risk-Analytics-System-using-Machine-Learning/blob/63cb342bbd7d3b7fcdd71bbc630ae8b56c89a4de/Transaction%20Type%20vs%20Fraud.png)
 
 > Breaks down fraud occurrence by transaction category. **CASH_OUT** and **TRANSFER** are the only types where fraud appears — making them the two highest-risk categories and the primary focus for any fraud detection pipeline.
 
 ---
 
 ### 3. Amount vs Fraud
-![Amount vs Fraud](images/amount_vs_fraud.png)
+![Amount vs Fraud](https://github.com/azmattanveer409/Financial-Fraud-Detection-Risk-Analytics-System-using-Machine-Learning/blob/63cb342bbd7d3b7fcdd71bbc630ae8b56c89a4de/Amount%20vs%20Fraud.png)
 
 > Compares transaction amount distributions for fraudulent vs legitimate cases. Fraud is concentrated in **mid-to-low value ranges**, suggesting fraudsters deliberately avoid high-value transactions to evade rule-based detection thresholds.
 
 ---
 
 ### 4. Correlation Heatmap
-![Correlation Heatmap](https://github.com/azmattanveer409/Financial-Fraud-Detection-Risk-Analytics-System-using-Machine-Learning/blob/e638d0262ae6e16ff2566a3e9e00678440450f9f/Fraud%20Detection(1).png)
+![Correlation Heatmap](https://github.com/azmattanveer409/Financial-Fraud-Detection-Risk-Analytics-System-using-Machine-Learning/blob/63cb342bbd7d3b7fcdd71bbc630ae8b56c89a4de/Correlation%20Heatmap.png)
 
 > Displays pairwise correlations between all numerical features. Strong relationships exist between **balance columns and transaction amounts**, while engineered error features show stronger links to the fraud label than the raw balance fields alone — validating the feature engineering approach.
 
