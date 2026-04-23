@@ -167,14 +167,14 @@ An interactive **3-page Power BI dashboard** was built to visualize fraud patter
 ---
 
 ### Page 2 — Transaction Behavior & Balance Analysis
-![Page 2 - Transaction Behavior](dashboard/page2_transaction_behavior.png)
+![Page 2 - Transaction Behavior](https://github.com/azmattanveer409/Financial-Fraud-Detection-Risk-Analytics-System-using-Machine-Learning/blob/3f85c711957c296a2f75bdf3dadcb07fc2a7ef34/Fraud%20Detection%20(2).png)
 
 > Deep-dive into balance flows and financial anomalies. Tracks avg transaction value (**$180K**), avg origin balance (**$833.88K**), net balance change (**$855.11K**), and balance error exposure (**-$201.09K**). Includes amount trend spikes up to $6.2M, balance movement scatter, and error pattern analysis — TRANSFER transactions carry an **87.80% positive error rate**.
 
 ---
 
 ### Page 3 — Fraud Detection Performance & Risk Profiling
-![Page 3 - Detection Performance](dashboard/page3_detection_performance.png)
+![Page 3 - Detection Performance](https://github.com/azmattanveer409/Financial-Fraud-Detection-Risk-Analytics-System-using-Machine-Learning/blob/3f85c711957c296a2f75bdf3dadcb07fc2a7ef34/Fraud%20Detection%20(3).png)
 
 > Evaluates the system's detection capability at a **19.48% detection rate**. Fraud risk classification shows CASH_OUT (4,116 cases / $394B) and TRANSFER (4,097 cases / $485B) as the primary risk vectors. Includes high-risk account identification, risk exposure scatter, and actual vs flagged fraud gap analysis.
 
