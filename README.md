@@ -1,10 +1,10 @@
-# 📊 🚨  Financial Fraud Detection & Risk Analytics System using Machine Learning
+# 📊 🚨 Financial Fraud Detection & Risk Analytics System using Machine Learning
 
 ## 🚀 Overview
 
 This project focuses on detecting fraudulent financial transactions using **data analysis, feature engineering, and machine learning techniques**. The objective is to identify suspicious transaction patterns and build a predictive system that classifies transactions as **fraudulent or legitimate**.
 
-The project combines **Exploratory Data Analysis (EDA)**, **feature engineering**, and **machine learning models**, along with an upcoming **Power BI dashboard** for interactive insights.
+The project combines **Exploratory Data Analysis (EDA)**, **feature engineering**, and **machine learning models**, along with a **Power BI dashboard** for interactive insights.
 
 ---
 
@@ -70,182 +70,220 @@ These engineered features help capture hidden fraud patterns.
 ## 📊 Exploratory Data Analysis (EDA)
 
 ### Fraud vs Non-Fraud (Distribution)
-
-**Insight:** Fraud cases are negligible compared to non-fraud, indicating severe class imbalance.
+**Insight:** Fraud cases are negligible compared to non-fraud, indicating severe class imbalance.  
 **Strategy:** Apply resampling techniques (e.g., SMOTE) or use recall-focused evaluation metrics.
 
 ---
 
 ### Transaction Type vs Fraud (Segmentation)
-
-**Insight:** Fraud occurs mainly in CASH_OUT and TRANSFER transactions, with negligible cases in others.
+**Insight:** Fraud occurs mainly in CASH_OUT and TRANSFER transactions, with negligible cases in others.  
 **Strategy:** Focus fraud detection and monitoring on these high-risk transaction types.
 
 ---
 
 ### Transaction Amount Distribution (Distribution)
-
-**Insight:** Most transactions are small, with a long tail of high-value transactions.
+**Insight:** Most transactions are small, with a long tail of high-value transactions.  
 **Strategy:** Apply log transformation or scaling to reduce skewness and improve model performance.
 
 ---
 
 ### Fraud vs Amount (Relationship)
-
-**Insight:** Fraud cases are more frequent in lower transaction amounts compared to high-value transactions.
+**Insight:** Fraud cases are more frequent in lower transaction amounts compared to high-value transactions.  
 **Strategy:** Include transaction amount thresholds and derived features in fraud detection models.
 
 ---
 
 ### Old Balance vs Fraud (Relationship)
-
-**Insight:** Fraud cases exhibit wider variation and extreme outliers in account balances.
+**Insight:** Fraud cases exhibit wider variation and extreme outliers in account balances.  
 **Strategy:** Use balance-based anomaly detection as a key fraud indicator.
 
 ---
 
 ### Error in Origin Balance (Distribution)
-
-**Insight:** Most origin balance errors are near zero, with a few extreme deviations.
+**Insight:** Most origin balance errors are near zero, with a few extreme deviations.  
 **Strategy:** Flag large deviations as potential fraud signals.
 
 ---
 
 ### Error in Destination Balance (Distribution)
-
-**Insight:** Destination balance errors are mostly minimal, concentrated near zero.
+**Insight:** Destination balance errors are mostly minimal, concentrated near zero.  
 **Strategy:** Monitor rare large deviations as anomaly indicators.
 
 ---
 
 ### Correlation Heatmap (Relationships)
-
-**Insight:** Strong correlations exist between balances and transaction amounts, but weak correlation with fraud labels.
+**Insight:** Strong correlations exist between balances and transaction amounts, but weak correlation with fraud labels.  
 **Strategy:** Engineer derived features (e.g., balance differences) to improve model detection capability.
 
 ---
 
 ### Large Transactions vs Fraud (Segmentation)
-
-**Insight:** Most fraud occurs in smaller transactions, while large transactions are fewer and generally safer.
+**Insight:** Most fraud occurs in smaller transactions, while large transactions are fewer and generally safer.  
 **Strategy:** Prioritize monitoring of smaller transactions while tracking anomalies in large ones.
 
 ---
-## 📊 Exploratory Data Analysis (EDA)
 
-Fraud vs Non-Fraud (Distribution)  
-**Insight:** Fraud cases are negligible compared to non-fraud.  
-**Strategy:** Apply resampling techniques (e.g., SMOTE) or use recall-focused metrics.  
+## 📸 Chart Visualizations
 
-...
+### 1. Fraud Distribution
+![Fraud Distribution](images/fraud_distribution.png)
 
-## 📊 Chart Visualizations
+> Shows the proportion of fraudulent vs legitimate transactions. Fraud cases represent only **0.13%** of all transactions — confirming extreme class imbalance that must be handled before model training using techniques like SMOTE or class weighting.
 
-![Fraud Distribution](https://github.com/azmattanveer409/Financial-Fraud-Detection-Risk-Analytics-System-using-Machine-Learning/blob/1ef4a077a7781fd950d17710ba9c819fc3751419/Fraud%20Distribution.png)
 ---
-![Transaction Type vs Fraud](https://github.com/azmattanveer409/Financial-Fraud-Detection-Risk-Analytics-System-using-Machine-Learning/blob/f7803f40087d97a15d94f429c36064dbe91ce054/Transaction%20Type%20vs%20Fraud.png)
+
+### 2. Transaction Type vs Fraud
+![Transaction Type vs Fraud](images/transaction_type_vs_fraud.png)
+
+> Breaks down fraud occurrence by transaction category. **CASH_OUT** and **TRANSFER** are the only types where fraud appears — making them the two highest-risk categories and the primary focus for any fraud detection pipeline.
+
 ---
-![Amount vs Fraud](https://github.com/azmattanveer409/Financial-Fraud-Detection-Risk-Analytics-System-using-Machine-Learning/blob/3600729c673cbb4f0b470a833e8b37efdb4c7cea/Amount%20vs%20Fraud.png)
+
+### 3. Amount vs Fraud
+![Amount vs Fraud](images/amount_vs_fraud.png)
+
+> Compares transaction amount distributions for fraudulent vs legitimate cases. Fraud is concentrated in **mid-to-low value ranges**, suggesting fraudsters deliberately avoid high-value transactions to evade rule-based detection thresholds.
+
 ---
-![Correlation Heatmap](https://github.com/azmattanveer409/Financial-Fraud-Detection-Risk-Analytics-System-using-Machine-Learning/blob/151b87d8f6b92ff169898c39567840fe8a0d4d1d/Correlation%20Heatmap.png)
+
+### 4. Correlation Heatmap
+![Correlation Heatmap](images/correlation_heatmap.png)
+
+> Displays pairwise correlations between all numerical features. Strong relationships exist between **balance columns and transaction amounts**, while engineered error features show stronger links to the fraud label than the raw balance fields alone — validating the feature engineering approach.
+
 ---
+
+## 💼 Power BI Dashboard
+
+An interactive **3-page Power BI dashboard** was built to visualize fraud patterns, transaction behavior, and detection performance at scale across 6.36 million transactions.
+
+---
+
+### Page 1 — Fraud Overview & Financial Risk Monitoring
+![Page 1 - Fraud Overview](dashboard/page1_fraud_overview.png)
+
+> High-level fraud KPIs across **6.36M transactions** totalling **$1 Trillion**. Confirmed fraud stands at **8,213 cases** with a **12.91% fraud rate** and **$12.06 Billion** in estimated losses. Features fraud trend over time, fraud distribution by type, and transaction volume breakdown — CASH_OUT and PAYMENT emerge as dominant fraud channels.
+
+---
+
+### Page 2 — Transaction Behavior & Balance Analysis
+![Page 2 - Transaction Behavior](dashboard/page2_transaction_behavior.png)
+
+> Deep-dive into balance flows and financial anomalies. Tracks avg transaction value (**$180K**), avg origin balance (**$833.88K**), net balance change (**$855.11K**), and balance error exposure (**-$201.09K**). Includes amount trend spikes up to $6.2M, balance movement scatter, and error pattern analysis — TRANSFER transactions carry an **87.80% positive error rate**.
+
+---
+
+### Page 3 — Fraud Detection Performance & Risk Profiling
+![Page 3 - Detection Performance](dashboard/page3_detection_performance.png)
+
+> Evaluates the system's detection capability at a **19.48% detection rate**. Fraud risk classification shows CASH_OUT (4,116 cases / $394B) and TRANSFER (4,097 cases / $485B) as the primary risk vectors. Includes high-risk account identification, risk exposure scatter, and actual vs flagged fraud gap analysis.
 
 ---
 
 ## 🤖 Machine Learning Approach
 
 ### 🔹 Problem Type
-
-**Supervised Learning → Classification**
+**Supervised Learning → Binary Classification**
 
 ### 🔹 Models Used
-
-* Logistic Regression (baseline model)
-* Random Forest (advanced model)
+* **Logistic Regression** — Baseline model
+* **Random Forest** — Advanced ensemble model
 
 ### 🔹 Data Handling
-
-* Train-test split (80% training, 20% testing)
-* SMOTE applied to address class imbalance
+* Train-test split: **80% training / 20% testing**
+* **SMOTE** applied to address class imbalance
 
 ---
 
 ## 📈 Model Evaluation
 
-The models were evaluated using:
+| Metric | Description |
+|--------|-------------|
+| **Confusion Matrix** | Measures correct and incorrect predictions |
+| **Precision** | Accuracy of fraud predictions |
+| **Recall** ⚠️ | Ability to detect actual fraud cases *(critical metric)* |
+| **F1-Score** | Balance between precision and recall |
+| **ROC-AUC Score** | Overall model discrimination performance |
 
-* **Confusion Matrix** → Measures correct and incorrect predictions
-* **Precision** → Accuracy of fraud predictions
-* **Recall (Critical)** → Ability to detect actual fraud cases
-* **F1-Score** → Balance between precision and recall
-* **ROC-AUC Score** → Overall model performance
-
-👉 The Random Forest model demonstrated strong performance in identifying fraud patterns.
+👉 The **Random Forest model** demonstrated strong performance in identifying fraud patterns across highly imbalanced data.
 
 ---
 
 ## 🔍 Key Insights
 
-1. Fraud cases are extremely rare, indicating severe class imbalance.
-2. Fraud is concentrated in CASH_OUT and TRANSFER transaction types.
-3. Most transactions are small; fraud is more common in lower-value transactions.
-4. Fraudulent behavior is associated with abnormal balance variations.
-5. Large deviations in balance errors indicate potential anomalies.
-6. Strong relationships exist between balances and transaction amounts.
-7. Smaller transactions require more focused fraud monitoring.
+1. Fraud cases are extremely rare — **0.13%** of total transactions (severe class imbalance)
+2. **100% of fraud** is concentrated in CASH_OUT and TRANSFER transaction types
+3. Fraud is **more common in lower-value transactions**, not large ones
+4. Fraudulent transactions are associated with **abnormal balance variations**
+5. Large deviations in balance errors are reliable **anomaly detection signals**
+6. Strong correlations between balances and amounts — engineered features improve detection
+7. Smaller transactions require **more focused monitoring** than large ones
 
 ---
 
 ## 🚀 Strategic Recommendations
 
-1. Apply resampling techniques or class-weighted metrics to effectively handle class imbalance.
-2. Prioritize fraud detection on high-risk transaction types such as CASH_OUT and TRANSFER.
-3. Normalize or log-transform transaction amounts to improve model stability.
-4. Use balance range and outlier detection as fraud risk indicators.
-5. Flag significant balance inconsistencies as anomaly signals.
-6. Engineer derived features to enhance fraud detection performance.
-7. Focus monitoring efforts on smaller transactions while tracking large transaction anomalies.
-
----
-
-## 📊 Power BI Dashboard (Coming Soon)
-
-An interactive dashboard will include:
-
-* KPI cards (Total Transactions, Fraud %, Total Amount)
-* Fraud distribution visualization
-* Transaction type risk analysis
-* Amount vs fraud patterns
-* Behavioral insights based on balances and ratios
-
-📌 *Dashboard will be updated soon*
-
----
-
-## 🖼️ Sample Visualizations
-
-```
-## 📸 Dashboard Preview
-
-![Fraud Distribution](fraud_distribution.png)
-![Transaction Type vs Fraud](type_vs_fraud.png)
-![Amount vs Fraud](amount_vs_fraud.png)
-![Correlation Heatmap](correlation.png)
-```
+1. Apply SMOTE or class-weighted metrics to handle class imbalance effectively
+2. Prioritize fraud detection on **CASH_OUT** and **TRANSFER** transaction types
+3. Log-transform transaction amounts to reduce skewness and improve model stability
+4. Use balance range and outlier flags as **fraud risk indicators**
+5. Flag significant balance inconsistencies in real-time pipelines
+6. Leverage engineered features (errorOrig, errorDest) as primary fraud signals
+7. Focus monitoring on **smaller transactions** while separately tracking large anomalies
 
 ---
 
 ## 🛠️ Tools & Technologies
 
-* Python (Pandas, NumPy)
-* Data Visualization (Matplotlib, Seaborn)
-* Machine Learning (Scikit-learn)
-* Imbalanced Learning (SMOTE)
-* Power BI
+| Tool | Purpose |
+|------|---------|
+| **Python** (Pandas, NumPy) | Data manipulation and preprocessing |
+| **Matplotlib, Seaborn** | EDA visualizations |
+| **Scikit-learn** | Machine learning models and evaluation |
+| **Imbalanced-learn (SMOTE)** | Class imbalance handling |
+| **Power BI** | Interactive business intelligence dashboard |
+
+---
+
+## 📁 Project Structure
+
+```
+Financial-Fraud-Detection/
+│
+├── notebook/
+│   └── fraud_detection.ipynb          # Main analysis notebook
+│
+├── data/
+│   └── fraud_dataset.csv              # Transaction dataset
+│
+├── images/                            # EDA chart exports
+│   ├── fraud_distribution.png
+│   ├── transaction_type_vs_fraud.png
+│   ├── amount_vs_fraud.png
+│   └── correlation_heatmap.png
+│
+├── dashboard/                         # Power BI dashboard screenshots
+│   ├── page1_fraud_overview.png
+│   ├── page2_transaction_behavior.png
+│   └── page3_detection_performance.png
+│
+├── Fraud Detection System.pbix        # Power BI report file
+└── README.md
+```
 
 ---
 
 ## 🏁 Conclusion
 
-This project demonstrates how **data analysis and machine learning can be combined to solve real-world financial problems**. By integrating EDA, feature engineering, and predictive modeling, the system can effectively detect fraudulent transactions and support data-driven decision-making.
+This project demonstrates how **data analysis and machine learning can be combined to solve real-world financial problems**. By integrating EDA, feature engineering, predictive modeling, and an interactive Power BI dashboard, the system can effectively detect fraudulent transactions and support **data-driven decision-making** in financial risk management.
 
+---
+
+## 👤 Author
+
+**Azmat Tanveer**  
+🔗 [GitHub Profile](https://github.com/azmattanveer409)
+
+---
+
+> ⭐ If you found this project useful, please consider giving it a star on GitHub!
