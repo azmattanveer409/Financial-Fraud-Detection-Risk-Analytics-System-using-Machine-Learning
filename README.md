@@ -147,7 +147,7 @@ These engineered features help capture hidden fraud patterns.
 ---
 
 ### 4. Correlation Heatmap
-![Correlation Heatmap](images/correlation_heatmap.png)
+![Correlation Heatmap](https://github.com/azmattanveer409/Financial-Fraud-Detection-Risk-Analytics-System-using-Machine-Learning/blob/e638d0262ae6e16ff2566a3e9e00678440450f9f/Fraud%20Detection(1).png)
 
 > Displays pairwise correlations between all numerical features. Strong relationships exist between **balance columns and transaction amounts**, while engineered error features show stronger links to the fraud label than the raw balance fields alone — validating the feature engineering approach.
 
@@ -160,7 +160,7 @@ An interactive **3-page Power BI dashboard** was built to visualize fraud patter
 ---
 
 ### Page 1 — Fraud Overview & Financial Risk Monitoring
-![Page 1 - Fraud Overview](dashboard/page1_fraud_overview.png)
+![Page 1 - Fraud Overview](https://github.com/azmattanveer409/Financial-Fraud-Detection-Risk-Analytics-System-using-Machine-Learning/blob/e638d0262ae6e16ff2566a3e9e00678440450f9f/Fraud%20Detection(1).png)
 
 > High-level fraud KPIs across **6.36M transactions** totalling **$1 Trillion**. Confirmed fraud stands at **8,213 cases** with a **12.91% fraud rate** and **$12.06 Billion** in estimated losses. Features fraud trend over time, fraud distribution by type, and transaction volume breakdown — CASH_OUT and PAYMENT emerge as dominant fraud channels.
 
